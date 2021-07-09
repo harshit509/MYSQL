@@ -1,8 +1,7 @@
-CREATE DATABASE
+0.CREATE DATABASE
 CREATE DATABASE STUDENT;
 
-
-CREATE TABLE
+1.CREATE TABLE
 CREATE TABLE FRESHERS( 
 ID INT NOT NULL, 
 NAME VARCHAR(30) NOT NULL, 
@@ -12,11 +11,76 @@ SALARY INT NOT NULL,
  
 
 
-INSERT
+2.INSERT
 INSERT INTO freshers(ID,NAME,SALARY,CAR)
 VALUES(1,"harshit",40000,"mercedeez"),
 (2,"honey",39000,"audi"),
 (3,"dupinder",5000,"maruti800");
+
+3.update command
+UPDATE FRESHERS SET ID=6 WHERE  NAME="shivam";
+
+
+4.select
+select * from freshers;
+
+
+5.SELECT AS
+select ID as ID_NO from freshers;
+IT ONLY CHANGE THE COLUMN NAME ID TO ID_NO THAT MEANS ITS ONLY WORK AS ALIAS
+
+
+6.SELECT LESSTHAN OR GREATER THAN
+SELECT ID FROM FRESHERS WHERE (ID>=2&&ID<5) ;
+
+
+7.SELECT NOT COMMAND
+SELECT ID FROM FRESHERS WHERE NOT (ID>=2&&ID<5) ;
+SO IT WILL NOT GIVE ME 234 DATA OTHER DATA HE WILL SHOWING ME.
+
+
+8.BETWEEN,LIKE,IN
+in
+SELECT * FROM FRESHERS WHERE ID IN (2,3,4) ;
+IT WILL SHOWING ME 2,3,4 DATABASE SIMPLY.
+
+between
+SELECT * FROM FRESHERS WHERE ID BETWEEN 3 and 5;
+ 
+
+like
+s%->something that start with s
+%s->something that end with s
+%s%->something that s is at any position
+a%s->something that start with a and end with s 
+__s%->s is at 3rd position.
+_om%->o is second and m is third position
+
+SELECT * FROM FRESHERS WHERE name like "d%";->this will return name start with d.
+SELECT * FROM FRESHERS WHERE name like "%h%";->this will return h is at any position in name column,
+ 
+9.to check case sensitive use binary keyword
+SELECT * FROM FRESHERS WHERE  binary name like "D%";
+
+10.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
